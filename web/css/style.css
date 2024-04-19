@@ -1,0 +1,20 @@
+header h1, header h2{
+    color: navy;
+    text-align: center;
+}
+h1 span.h1cur{
+    font-style: italic;
+}
+
+#contenido .anuncio{
+    color: navy;
+    text-align: center;
+}
+p.anuncio{
+    text-align: center;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+
