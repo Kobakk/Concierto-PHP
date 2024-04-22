@@ -1,21 +1,18 @@
 <?php ob_start() ?>
   <h1 class="anuncio">Coachealla Dos</h1>
   <h2 class="anuncio">El mejor evento de este verano.</h2>
-  <?php if(isset($todo)):?>
-  <?php endif;?>
-  <form action="">
-<form action="submit.php" method="post">
-    <label for="opciones">Selecciona Artistas:</label>
+<form action="index.php?ctl=comprobarEntrada" method="post">
+    <label for="opciones">Selecciona Grupo:</label>
     <select name="opciones" id="opciones">
-        <option value="opcion1">Opción 1</option>
-        <option value="opcion2">Opción 2</option>
-        <option value="opcion3">Opción 3</option>
-        <option value="opcion4">Opción 4</option>
+  <?php if(isset($todo)):?>
+    <?php foreach($todo as $artista): ?>
+        <option value="<?= $artista['grupo']?>"><?= $artista['grupo']?></option>
+    <?php endforeach; ?>
     </select>
     <br>
-    <input type="submit" value="Enviar">
+    <button type="submit">Enviar</button>
 </form>
-  </form>
+  <?php endif;?>
  <?php $contenido = ob_get_clean() ?>
 
  <?php include 'base.php' ?>

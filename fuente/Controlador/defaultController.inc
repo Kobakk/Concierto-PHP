@@ -3,6 +3,7 @@
 class DefaultController
 { public function inicio()
   { 
+    if(!empty($_SESSION)) var_dump($_SESSION);
     require __DIR__ . '/../../fuente/Repositorio/TicketsRepositorio.php';
     $todo = (new TicketsRepositorio())->getTickets();
     require __DIR__ . '/../../app/plantillas/inicio.php';

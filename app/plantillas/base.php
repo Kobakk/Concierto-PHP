@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cadena Tiendas</title>
+    <title>Concierto Verano|Conciertos 2024</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href='web/css/style.css' />
@@ -10,15 +10,16 @@
 
     <header>
     <nav>
-      <h1 class="h">Cocachella Dos</h1>
+      <h1 class="Title">Concierto Verano</h2>
       <a href="index.php?ctl=inicio">Inicio</a> |
-      <a href="index.php?ctl=pedirEntrada">Pide tu entrada owo</a>
+      <a href="index.php?ctl=pedirEntrada">Reservar</a>
     </nav>
-</header>
+    </header>
 
-    <div id="contenido">
+    <main id="contenido">
       <?= $contenido ?>
-    </div>
+    </main>
+
     <footer>
       <hr>
       <p class="anuncio">- Pie de página -</p>
