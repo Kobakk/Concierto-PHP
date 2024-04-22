@@ -1,7 +1,7 @@
 <?php ob_start() ?>
   <h1 class="anuncio">Coachealla Dos</h1>
   <h2 class="anuncio">El mejor concierto de este verano</h2>
-<form action="index.php?ctl=comprobarEntrada" method="post">
+<form action="index.php?ctl=escogerEntreVariasHoras" method="post">
     <label for="opciones">Selecciona la hora:</label>
     <select name="opciones" id="opciones">
   <?php if(isset($banda)):?>

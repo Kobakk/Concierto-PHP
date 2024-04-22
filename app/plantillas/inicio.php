@@ -7,7 +7,7 @@
   <div class="artistas">
     <h3 class="nombreArtista"><?= $artista['grupo'] ?></h3>
     <p class="hora"><?= date( "H:i", strtotime($artista['hora'])) ?></p>
-    <p class="fecha"><?=date("d/m", strtotime($artista['fecha']))?></p>
+    <p class="fecha"><?= date("d/m", strtotime($artista['fecha']))?></p>
   </div>
   <?php endforeach; ?>
   <?php endif;?>

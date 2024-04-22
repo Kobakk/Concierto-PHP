@@ -19,5 +19,6 @@ $mapeoRutas =
     'pedirEntrada' => ['controller' => 'entradaController', 'action' => 'inicio'],
     'comprobarEntrada' => ['controller' => 'entradaController', 'action' => 'comprobarHoraGrupo'],
     'reserva' => ['controller' => 'reservaController', 'action' => 'reserva'],
+    'escogerEntreVariasHoras' => ['controller' => 'entradaController', 'action' => 'escogerEntreVariasHoras'],
   ];
 
