@@ -12,6 +12,9 @@ class reservaController{
                 } else{
                     $_SESSION['usuario']['dni'] = $_POST['dni'];
                     $_SESSION['usuario']['localidades'] = $_POST['localidades'];
+                    require_once __DIR__ . '../../Repositorio/ReservaRepositorio.php';
+                    $_SESSION['id'] = 
+                    (new ReservarRepositorio())->reservar($_POST['dni'], $_SESSION['reserva']['fecha'],$_SESSION['reserva']['hora'],$_SESSION['reserva']['idActuacion'],$_POST['localidades'] );
                     header('Location: index.php?ctl=inicio');
                 }
             }
@@ -21,7 +24,9 @@ class reservaController{
     }
 
     public function confirmarPago(){
-
+        require_once __DIR__ . '../../Repositorio/ReservaRepositorio.php';
+        (new ReservarRepositorio())->confirmarReserva($_SESSION['id']);
+        unset($_SESSION['id']);
         header('Location: index.php?ctl=inicio');
     }
 }
