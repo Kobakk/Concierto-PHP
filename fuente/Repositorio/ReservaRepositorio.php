@@ -26,7 +26,7 @@ class ReservarRepositorio{
 
     public function confirmarReserva(int $id){
         $sql = 'UPDATE reserva 
-        set pagado = true 
+        set pagado = 1 
         WHERE idReserva = :id';
         require_once __DIR__ . '/../../core/ConexionBd.inc';         
         try{
