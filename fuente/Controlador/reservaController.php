@@ -20,7 +20,8 @@ class reservaController{
     require_once __DIR__ . '../../../app/plantillas/reserva.php';
     }
 
-    public function confirmarReserva(){
+    public function confirmarPago(){
 
+        header('Location: index.php?ctl=inicio');
     }
 }
