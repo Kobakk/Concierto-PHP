@@ -1,7 +1,7 @@
 <?php
 class reservaController{
     public function reserva(){
-        var_dump($_SESSION);
+        //var_dump($_SESSION);
        if(isset($_POST)) {
             if(empty($_POST['dni']) || empty ($_POST['localidades'])){
                 $_SESSION['error'] = "Especifique dni y localidades";
@@ -12,13 +12,13 @@ class reservaController{
                 } else{
                     $_SESSION['usuario']['dni'] = $_POST['dni'];
                     $_SESSION['usuario']['localidades'] = $_POST['localidades'];
+                    $_SESSION['usuario']['pago'] = $_POST['localidades'] * $_SESSION['reserva']['precio'];
                     require_once __DIR__ . '../../Repositorio/ReservaRepositorio.php';
                     $_SESSION['id'] =  (new ReservarRepositorio())->reservar($_POST['dni'], $_SESSION['reserva']['fecha'],$_SESSION['reserva']['hora'],$_SESSION['reserva']['idActuacion'],$_POST['localidades'] );
                     if(isset($_SESSION['error'])){ unset($_SESSION['error']); }
                     header('Location: index.php?ctl=inicio');
                 }
             }
-
        }
     require_once __DIR__ . '../../../app/plantillas/reserva.php';
     }
