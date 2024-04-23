@@ -2,6 +2,9 @@ header h1, header h2{
     color: navy;
     text-align: center;
 }
+html{
+    background: olive;
+}
 h1 span.h1cur{
     font-style: italic;
 }

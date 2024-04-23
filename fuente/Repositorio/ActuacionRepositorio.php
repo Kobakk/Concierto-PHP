@@ -34,6 +34,5 @@ class ActuacionRepositorio{
             if(isset($snt)) unset($snt);
             if(isset($con)) $con=null;
         }
-        return [];
     }
 }
