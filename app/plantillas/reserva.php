@@ -1,5 +1,6 @@
 <?php ob_start() ?>
-<?php var_dump($_SESSION)?>
+<h2 class="anuncio">Usa tu DNI para optener la reserva</h2>
+<article class="box">
 <form action="index.php?ctl=reserva" method="post">
     <label for="dni">DNI :</label>
     <input type="text" name="dni" placeholder="Ejemplo: 18799867A">
@@ -8,6 +9,7 @@
     <br>
     <button type="submit">Enviar</button>
 </form>
+</article>
  <?php $contenido = ob_get_clean() ?>
 
  <?php include 'base.php' ?>

@@ -11,11 +11,13 @@
     <header>
     <nav>
       <h1 class="Title">Concierto Verano</h2>
-      <a href="index.php?ctl=inicio">Inicio</a> |
-      <a href="index.php?ctl=pedirEntrada">Reservar</a> |
-      <?php if(isset($_SESSION['usuario'])):?>
-        <a href="index.php?ctl=confirmarPago">Confirmar Pago</a>
-      <?php endif;?>
+      <ul>
+        <li><a href="index.php?ctl=inicio">Inicio</a></li>
+        <li><a href="index.php?ctl=pedirEntrada">Reservar</a></li>
+        <?php if(isset($_SESSION['usuario'])):?>
+         <li><a href="index.php?ctl=confirmarPago">Confirmar Pago</a> </li>
+        <?php endif;?>
+      </ul>
     </nav>
     </header>
 

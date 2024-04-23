@@ -1,6 +1,7 @@
 <?php ob_start() ?>
   <h1 class="anuncio">Coachealla Dos</h1>
   <h2 class="anuncio">El mejor evento de este verano.</h2>
+  <article class="box">
 <form action="index.php?ctl=comprobarEntrada" method="post">
     <label for="opciones">Selecciona Grupo:</label>
     <select name="opciones" id="opciones">
@@ -13,6 +14,7 @@
     <button type="submit">Enviar</button>
 </form>
   <?php endif;?>
+  </article>
  <?php $contenido = ob_get_clean() ?>
 
  <?php include 'base.php' ?>

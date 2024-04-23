@@ -18,3 +18,24 @@ a{
     text-decoration: none;
 }
 
+.box{
+    display: flex;
+    gap: 20px;
+    align-content: center;
+    justify-content: center;
+    margin: 40px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 800px;
+}
+ul{
+    display: flex;
+    gap: 35px;
+}
+li{
+    list-style: none;
+}
