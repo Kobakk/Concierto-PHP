@@ -1,4 +1,8 @@
 <?php
+//namespace app\fuente\repositorio\Actuacion;
+//use app\core\ConexionBd
+
+
 class ActuacionRepositorio{
     public function getTodo():array{
         $sql = 'SELECT idActuacion, fecha, hora, grupo, precio, entradasDisponibles

@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../app/conf/config.inc';
+//namespace app\core\ConexionBd
 
 class ConexionBd
 { private $con;
