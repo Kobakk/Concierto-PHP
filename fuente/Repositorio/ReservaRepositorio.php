@@ -1,12 +1,44 @@
 <?php
 
 class ReservarRepositorio{
-    public function reservar(){
-        $sql = 'INSERT INTO';
+    public function reservar(string $dni, string $fecha, string $hora, int $id, int $localidades):int{
+        $sql = 'INSERT INTO dbo.Reserva (dni, fecha, hora,idActuacion, localidades, pagado)
+        VALUES(:dni, :fecha, :hora,:idActuacion,:localidades, 0);';
+        require_once __DIR__ . '/../../core/ConexionBd.inc';         
+        try{
+            $con = (new ConexionBd())->getConexion();
+            $snt = $con->prepare($sql);
+            $snt->bindValue(':dni', $dni);
+            $snt->bindValue(':fecha', $fecha);
+            $snt->bindValue(':hora', $hora);
+            $snt->bindValue(':idActuacion', $id);
+            $snt->bindValue(':localidades', $localidades);             
+            $snt->execute();
+            return $con->lastInsertId();
+        } catch (\PDOException $ex){
+            throw $ex;
+        } finally {
+            if(isset($snt)) unset($snt);
+            if(isset($con)) $con=null;
+        }
 
     }
 
-    public function confirmarReserva(){
-
+    public function confirmarReserva(int $id){
+        $sql = 'UPDATE reserva 
+        set pagado = true 
+        WHERE idReserva = :id';
+        require_once __DIR__ . '/../../core/ConexionBd.inc';         
+        try{
+            $con = (new ConexionBd())->getConexion();
+            $snt = $con->prepare($sql);
+            $snt->bindValue(':id', $id);
+            $snt->execute();
+        }catch (\PDOException $ex){
+            throw $ex;
+        } finally {
+            if(isset($snt)) unset($snt);
+            if(isset($con)) $con=null;
+        }
     }
 }
