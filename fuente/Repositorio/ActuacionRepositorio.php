@@ -1,6 +1,6 @@
 <?php
 //namespace app\fuente\repositorio\Actuacion;
-//use app\core\ConexionBd
+//use app\core\ConexionBd;
 
 
 class ActuacionRepositorio{
