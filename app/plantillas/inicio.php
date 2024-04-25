@@ -3,6 +3,20 @@
   <h2 class="anuncio">Bandas y Horarios</h2>
 
   <article class="box">
+    <table>
+      <tr>
+        <td>Banda</td>
+      </tr>
+      <tr>
+        <td>hora</td>
+      </tr>
+    <tr>
+      <td>fecha</td>
+    </tr>
+    <tr>
+      <td>precio</td>
+    </tr>
+    </table>
     <?php if(isset($todo)):?>
 
       <?php foreach($todo as $artista): ?>

@@ -2,9 +2,6 @@ header h1, header h2{
     color: navy;
     text-align: center;
 }
-html{
-    background: olive;
-}
 h1 span.h1cur{
     font-style: italic;
 }
@@ -19,6 +16,15 @@ p.anuncio{
 }
 a{
     text-decoration: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+#contenido{
+    flex: 1;
 }
 
 .box{
